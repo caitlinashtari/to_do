@@ -37,8 +37,12 @@ require('spec_helper')
       end
     end
 
-    describe("#sort") do
+    describe(".sort_date") do
       it('let you sort the tasks by their due date') do
+        @new_task.save()
+        next_task = Task.new({:description => "scrub 2 zebra", :list_id => 2, :due_date => "2016-12-13"})
+        next_task.save()
+        expect(Task.sort_date()).to(eq([@new_task, next_task]))
 
       end
     end
