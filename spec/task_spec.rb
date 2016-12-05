@@ -32,14 +32,6 @@ end
       end
     end
 
-    describe(".clear") do
-      it("empties out all of the saved tasks") do
-        Task.new({:description => "wash the lion"}).save()
-        Task.clear()
-        expect(Task.all()).to(eq([]))
-      end
-    end
-
     describe('#==') do
       it('is the same task if it has the same description') do
         task1 = Task.new({:description => "learn SQL"})
