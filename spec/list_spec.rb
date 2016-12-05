@@ -32,4 +32,12 @@ describe(List) do
       expect(list1).to(eq(list2))
     end
   end
+
+  describe("#id") do
+    it("sets its ID when you save it") do
+      list = List.new({:name => "Epicodus stuff", :id => nil})
+      list.save()
+      expect(list.id()).to(be_an_instance_of(Fixnum))
+    end
+  end
 end
