@@ -10,6 +10,13 @@ get('/') do
   erb(:index)
 end
 
-post('/list/added') do
+get('/lists/new') do
+  erb(:list_form)
+end
+
+post('/lists/new') do
+  name = params.fetch("name")
+  list = List.new({:name => name, :id =>nil})
+  list.save()
   erb(:success)
 end
