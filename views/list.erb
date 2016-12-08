@@ -13,19 +13,6 @@
     <p>There are no tasks on this list!</p>
   <% end %>
 
-<h3>Add a taks to <%= @list.name %></h3>
-
-<form action="/tasks" method="post">
-  <input id="list_id" type="hidden" name="list_id" value="<%=@list.id%>">
-
-  <label for="description">Description of the task:</label>
-  <input type="text" name="description" value="description">
-
-  <label for="due_date">Due date for the task:</label>
-  <input type="text" name="due_date" value="due_date">
-
-  <button type="submit">Add task</button>
-</form>
 
 <hr>
 
